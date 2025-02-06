@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <h1>Welcome to the Dashboard</h1>
+    <p>Welcome, <%= user.name %></p>
+    <% if(user.role === 'admin') { %>
+        <a href="/admin/dashboard">Admin Dashboard</a>      
+    <% }else { %>
+        <a href="/student/dashboard">student Dashboard</a>
+    <% }     %>
+    <a href="/auth/logout">Logout</a>
+  </body>
+</html>
+
+
